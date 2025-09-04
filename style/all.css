@@ -116,6 +116,18 @@
 .item-content-title a:hover{
 	color:#2894FF;
 }
+/*線的動畫效果*/
+.item-content-title::after{
+	content:"";
+	display: block;
+	height: 1px;
+	width: 0%;
+	background-color: #ccc;
+	transition: width .5s .3s;
+}
+.item-content:hover .item-content-title::after{
+	width: 100%;
+}
 .item-content-text{
 	color:#636363;
 	line-height: 1.6em;
@@ -158,10 +170,10 @@
   z-index: 10;
   background-color: #333;
   color: #fff;
-  width:48px;
-  height:48px;
+  width:40px;
+  height:40px;
   border-radius: 50%;
-  font-size: 32px;
+  font-size: 30px;
   text-align: center;
  display:flex;
   align-items: center;
